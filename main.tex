@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{enumerate}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 
@@ -27,27 +28,62 @@
 \section*{Definitions}
 \begin{enumerate}
     \item For integers a and b, define a $\mathbf{divides}$ b.
+        \newline $\circ$ $Definition - $ there exists a $b$ such that $b=a\cdot k$, where $k \in \mathbb{Z}$
     \item Define a $\mathbf{proposition}$.
+        \newline $\circ$ $Definition - $ A $\mathbf{proposition}$ is a sentence that has exactly one truth value.
     \item Define a $\mathbf{conditional}$ $\mathbf{sentence}$.
+        \newline $\circ$ $Definition - $ For propositions P and Q, the $\mathbf{Conditional}$ $\mathbf{sentence}$ $P\implies Q$ is the proposition "If P, then Q". Proposition P is called the $\mathbf{antecednet}$ and Q is the $\mathbf{consequent}$.
     \item The $\mathbf{power}$ $\mathbf{set}$ of a set A.
+        \newline $\circ$ $Definition - $ Let A be a set. The $\mathbf{power}$ $\mathbf{set}$ of A is the set whoe elements are the subsets of A and is denoted by $\mathscr{P}(A)$. Thus
+        \begin{center}
+            $\mathscr{P}(A) = \{B:B\subseteq A\}$
+        \end{center}
     \item The $\mathbf{intersection}$ of sets A and B.
+        \newline $\circ$ $Definition - $ The \textbf{intersection of A and B} is the set $A \cap B = \{ x:x \in A$ and $x \in B \}$.
     \item The $\mathbf{union}$ of sets A and B.
+        \newline $\circ$ $Definition - $ The \textbf{union of A and B} is the set $A\cup B = \{ x:x \in A$ or $x\in B \}.$
     \item State one of $\mathbf{Demorgan's}$ $\mathbf{Laws}$ for two sets.
+        \newline $\circ$ $Definition - $ $(A \cup B)^c = A^c \cap B^c.$ or $(A \cap B)^c = A^c \cup B^c.$
     \item An indexed family of sets $\mathscr{A}$ is $\mathbf{pairwise}$ $\mathbf{disjoint}$.
+        \newline $\circ$ $Definition - $ The indexed family $\mathscr{A} = \{A_{\alpha}: \alpha \in \delta \}$ of sets is \textbf{pairwise disjoint} iff for all $\alpha$ and $\beta$ in $\delta$, either $A_\alpha = A_\beta$ or $A_\alpha \cap A_\beta = \varnothing.$
     \item State the Principle of Mathematical Induction.
+    \begin{enumerate}[(i)]
+        \item $1\in S,$ 
+        \item for all $n\in \mathbb{N}$, if $n \in S$ then $n + 1 \in S.$
+    \end{enumerate}
+    Then S = $\mathbb{N}$
+        
     \item State the Well-Ordering Principle.
+        \newline $\circ$ $Definition - $ Every nonempty subset of $\mathbb{N}$ has a smallest element.
     \item A $\mathbf{relation}$ from A to B, for sets A and B.
+        \newline $\circ$ $Definition - $ R is a relation from $a$ to $b$ iff R is a subset of $A$ X $B$
     \item The $\mathbf{domain}$ of a relation R from A to B.
+        \newline $\circ$ $Definition - $ Dom(R)=$\{x\in A:$ there exists $y \in B$ such that $xRy \}$
     \item The $\mathbf{range}$ of a relation R from A to B.
+        \newline $\circ$ $Definition - $ Rng(R)=$\{y\in A:$ there exists $x \in B$ such that $xRy \}$
     \item The composite $S \circ R$ where R is a relation from A to B and S is a relation from B to C. 
+        \newline $\circ$ $Definition - $ $S \circ R = \{(a,c) :$ there exists $b \in B$ such that $(a,b) \in R$ and $(b,c) \in S \}$
     \item A relation R on A is $\mathbf{reflexive}$.
+        \newline $\circ$ $Definition - $ iff for all $x \in A,$ $xRx$
     \item A relation R on A is $\mathbf{symmetric}$.
+        \newline $\circ$ $Definition - $ iff for all $x,y \in A,$ $xRy$ then $yRx$
     \item A relation R on A is $\mathbf{transitive}$.
+        \newline $\circ$ $Definition - $ iff for all $x,y,z \in A$, $xRy$ and $yRz$, then $xRz$
     \item A $\mathbf{partition}$ $\mathscr{P}$ of a nonempty set A.
+        \newline $\circ$ $Definition - $ $\mathscr{P}$ is a partition of a nonempty set A.
+        \begin{enumerate}[(i)]
+            \item if $x\in \mathscr{P}$, then $x \neq \varnothing$
+            \item if $x\in \mathscr{P}$ and $y \in \mathscr{P}$, then $x=y$ or $x \cap y = \varnothing$
+            \item $\bigcup_{x = \mathscr{P}} x = A$
+        \end{enumerate}
     \item A $\mathbf{function}$ from A to B, for sets A and B.
+        \newline $\circ$ $Definition - $
     \item $f:A\rightarrow B$ is $\mathbf{surjective}$
+        \newline $\circ$ $Definition - $
     \item $f:A\rightarrow B$ is $\mathbf{injective}$
+        \newline $\circ$ $Definition - $
     \item $f:A\rightarrow B$ and $Y \subseteq B$. Define $f^{-1}(Y).$
+        \newline $\circ$ $Definition - $
 \end{enumerate}
 \pagebreak
 
@@ -156,11 +192,12 @@
         \begin{proof}
         \end{proof}
         
-    \item Let R be an antisymmetric relation on the set A. \newnline Prove that if R is symmetric and $Dom(R) = A,$ then $R=I_A$
+    \item Let R be an antisymmetric relation on the set A. 
+    \newnline Prove that if R is symmetric and $Dom(R) = A,$ then $R=I_A$
         \begin{proof}
         \end{proof}
         
-    \item Define a relation R on $\mathbb{R}$ by $aRb$ \iff $a^3=b^5$. Prove that R is a function from $\mathbb{R}$ to $\mathbb{R}.$
+    \item Define a relation R on $\mathbb{R}$ by $aRb$ $\iff$ $a^3=b^5$. Prove that R is a function from $\mathbb{R}$ to $\mathbb{R}.$
         \begin{proof}
         \end{proof}
         
@@ -168,23 +205,23 @@
         \begin{proof}
         \end{proof}
         
-    \item
+    \item Prove that if $f:A \xrightarrow{\text{onto}} B$ and $g:B\xrightarrow{\text{onto}} C$, then $g\circ f:A \xrightarrow{\text{onto}} C.$
         \begin{proof}
         \end{proof}
         
-    \item
+    \item Let $f:A\xrightarrow{} B$. Prove that if $f^{-1}$ is a function, then $f$ is injective.
         \begin{proof}
         \end{proof}
         
-    \item
+    \item Prove that $g:(-\infty, -4)\rightarrow(-\infty,0)$, defined by $g(x) = -|x+4|$ is a one-to-one correspondence.
         \begin{proof}
         \end{proof}
         
-    \item
+    \item Let $f:A \rightarrow B$ and $Y \subseteq B.$ Prove that $f(f^{-1}(Y)) \subseteq Y.$
         \begin{proof}
         \end{proof}
         
-    \item
+    \item Let $f:A \rightarrow B$ be injective and $X \subseteq A.$ \newline Prove that $X = f^{-1}(f(X))$ 
         \begin{proof}
         \end{proof}
     
