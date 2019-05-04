@@ -6,6 +6,8 @@
 \usepackage{enumerate}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
+\usepackage{indentfirst}
+\renewcommand{\qedsymbol}{$\blacksquare$}
 
 \newcommand{\numpy}{{\tt numpy}}    % tt font for numpy
 
@@ -108,21 +110,39 @@
 \section{Proofs}
 \begin{enumerate}
     \item Prove that $\sqrt{2}$ is irrational.
-        \begin{proof}
-            this is the beginning of a proof
+        \begin{proof}[Proof:\nopunct] \\ 
+             Assume $\sqrt{2}$ is rational. 
+             \\ Thus $\sqrt{2} = \frac{a}{b}$, where $a,b \in \mathbb{Z}$ and $a,b$ have no common factors.
+             \\ Now let us write $2 = \frac{a^2}{b^2}$, or $b^2=2a^2$.
+             \\ Thus $b^2$ is even, the only way this can be true is that b itself is even.
+             \\ hence $b^2$ is divisible by 4. This contradicts our assumption that a,b have no common factors
+             \\ Therefore $\sqrt{2}$ cannot be rationalized.
         \end{proof}
         
     \item Prove that there are infinitely many prime numbers.
-        \begin{proof}
+        \begin{proof}[Proof:\nopunct]
+            Assume there exists a finite number of primes $\{p_1, p_2, ... , p_n \}$ 
+            \\ Let $N = p_1\cdot p_2 \cdot p_3 \cdot \cdot \cdot p_{n+1}$
+            \\ $N$ is not divisible by any of the known primes since it will leave a remainder of one upon division by any one of them.
+            \\ Thus, N must be a divisible by some other prime not in our list
+            \\ which contradicts the assumption that there is a finite number of primes.
+            \\ Therefore There are an infinite number of prime numbers
         \end{proof}
         
-    \item Let $x$ be an integer. Prove that if $x^2$ is not divisible by 4, then $x$ is odd.
-        \begin{proof}
+    \item \textbf{ Let $x$ be an integer. Prove that if $x^2$ is not divisible by 4, then $x$ is odd.}
+        \begin{proof}[Proof:\nopunct] by contrapositive
+            \\ Assume x is not even.
+            \\ Then $x = 2k + 1$ for some $k\in \mathbb{Z}$
+            \\ And if $x = 2k + 1$, it follows that 
+            \\ $x^2 = (2k+1)^2= 4k^2 + 4k + 1 = 4(k^2+k)+1$
+            \\ Clearly, 4 does not divide $x^2=4(k^2+k)+1$, because 4 does not divide 1.
+            \\ Thus if x is not even $\implies$ $x^2$ is not divisible by 4.
+            \\ Clearly, if x is even $\implies$ $x^2$ is divisible by 4.
         \end{proof}
         
     \item When any integer $n$ is divided by 3, it has a remainder of 0, 1, or 2 ( by the division algorithm). This means that for any integer $n$ 
             \newline \newline
-             $n = 3k for some integer k, or$
+             $n = 3k$ for some integer k, or
             \newline
             $n = 3k+1$ for some integer k, or 
             \newline
