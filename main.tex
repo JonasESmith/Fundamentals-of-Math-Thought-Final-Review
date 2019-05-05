@@ -252,6 +252,29 @@
         \begin{proof}[Proof:\nopunct]
             Let n = 1
             \begin{align*}
+                \text{so } 1\cdot1! & = (1+1)! - 1 \\
+                1 & = 2! - 1 \\
+                1 & = 1, \text{this is true!}
+            \end{align*}
+            \text{Now assume truth for any n $\in \mathbb{N}$} \\
+            \text{we will show proof for $n + 1$:}
+            \begin{align*}
+                \text{so, }((n+1)+1)!-1 & = 1\cdot1! + 2\cdot2! + \text{...} + n\cdot n! + (n+1)\cdot(n+1)! \\
+                (n+2)! - 1& = (n+1)! - 1 + (n+1)\cdot(n+1)! \\
+                & = (n+1)!(1+(n+1))-1 \\
+                & = (n+1)!(n+2)-1, \text{by the definition of factorial} \\
+                & = (n+2)! - 1
+            \end{align*}
+            Thus for all $n \in \mathbb{N}$ $1\cdot1+2\cdot2!+3\cdot3!+\cdot \cdot \cdot + n\cdot n!=(n+1)!-1$
+        \end{proof}
+        
+    \item Use the principle of Mathematical Induction to prove the following: For all $n \in \mathbb{N}:$
+    \begin{center}
+        8 divides $5^{2n} -1$
+    \end{center}
+        \begin{proof}[Proof:\nopunct]
+            Let n = 1
+            \begin{align*}
                 \text{ thus $5^n-1 = 24,$ which is divisible by 8}
             \end{align*}
                 Now assume $n \in \mathbb{N}$ is true, we will show $n+1$ is true:
@@ -266,13 +289,6 @@
                 & \text{and, 24 is divisible by 8.} \\
                 & \text{Therefor for all $n\in \mathbb{N}$, $5^n - 1,$ is divisible by 8.}
             \end{align*}
-        \end{proof}
-        
-    \item Use the principle of Mathematical Induction to prove the following: For all $n \in \mathbb{N}:$
-    \begin{center}
-        8 divides $5^{2n} -1$
-    \end{center}
-        \begin{proof}[Proof:\nopunct]
         \end{proof}
         
     \item We have the common differentiation formulas $\frac{d}{dx} x=1$ and $\frac{d}{dx}(fg)=f(\frac{d}{dx}g) + (\frac{d}{dx}f)g$. 
@@ -298,7 +314,7 @@
         \end{proof}
         
     \item Let R be an antisymmetric relation on the set A. 
-    \newnline Prove that if R is symmetric and $Dom(R) = A,$ then $R=I_A$
+    \\ Prove that if R is symmetric and $Dom(R) = A,$ then $R=I_A$
        \begin{proof}[Proof:\nopunct]
         \end{proof}
         
@@ -306,7 +322,7 @@
        \begin{proof}[Proof:\nopunct]
         \end{proof}
         
-    \item Prove that, if $f$ and $g$ are functions, then $f \cap g$ is a function by showing that $f\capg = g|_{A}$ where \newline $A = \{x$ : $g(x) = f(x) \}.$
+    \item Prove that, if $f$ and $g$ are functions, then $f \cap g$ is a function by showing that $f\capg = g|_{A}$ where \\ $A = \{x$ : $g(x) = f(x) \}.$
        \begin{proof}[Proof:\nopunct]
         \end{proof}
         
