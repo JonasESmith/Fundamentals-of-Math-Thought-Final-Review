@@ -95,19 +95,19 @@
 \end{enumerate}
 \pagebreak
 
-\section{Part 3 Problems}
+\section*{Part 3 Problems}
 \begin{enumerate}
     \item 
 \end{enumerate}
 \pagebreak
 
-\section{Part 4 Problems}
+\section*{Part 4 Problems}
 \begin{enumerate}
     \item 
 \end{enumerate}
 \pagebreak
 
-\section{Proofs}
+\section*{Proofs}
 \begin{enumerate}
     \item Prove that $\sqrt{2}$ is irrational.
         \begin{proof}[Proof:\nopunct] \\ 
@@ -291,13 +291,40 @@
             \end{align*}
         \end{proof}
         
+    \pagebreak
     \item We have the common differentiation formulas $\frac{d}{dx} x=1$ and $\frac{d}{dx}(fg)=f(\frac{d}{dx}g) + (\frac{d}{dx}f)g$. 
     \newline Use these formulas and the Principle of Mathematical Induction to prove that $\frac{d}{dx}x^n = nx^{n-1}$ for all $n \in \mathbb{N}$.
         \begin{proof}[Proof:\nopunct]
+            Let $n=1$
+            \begin{align*}
+                \frac{d}{dx} x=1
+            \end{align*}
+            Assume for some $n\in \mathbb{N}$, that $\frac{d}{dx}x^n = nx^{n-1}$ \\
+            Now let us prove for $n+1$
+            \begin{align*}
+                \text{thus, } \frac{d}{dx}x^{n+1} & = (n+1)x^{(n+1)-1} \\
+                & = (n+1)x^n \\ 
+                & = (n+1)nx^{n-1} \\
+                & = n^2x^{n-1} + nx^{n-1} \\
+                & = nx^{n-1}(n+1) \\
+            \end{align*}
         \end{proof}
         
     \item Let $a_1=2$, $a_2=4$, and $a_{n+2} = 5a_{n+1} - 6a_n$, for all $n \leq 1.$ Prove that $a_n = 2^n$ for all $n \in \mathbb{N}$
         \begin{proof}[Proof:\nopunct]
+        Let n=1, thus $a_1 = 2^1 = 2$ \\
+        Now assume $a_n=2^n$ \\
+        We will now prove $n+1$
+            \begin{align*}
+                \text{thus } a_{n+1} & = 5_a-6a_{n-1} \\
+                & = 5\cdot2^n - 6\cdot2^{n-1} \\
+                & = 5 \cdot 2^n-3\cdot2\cdot2^{n-1} \\
+                & = 2^n(5-3) \\
+                & = 2^n(2) \\
+                & = 2^{n+1} \\
+                a_{n+1} & = 2^{n+1}
+            \end{align*}
+            Thus by induction of n $a_n=2^n$
         \end{proof}
         
     \item Let R be a relation from A to B and S be a relation from B to C. \newline
