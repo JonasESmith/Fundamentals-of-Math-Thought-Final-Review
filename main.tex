@@ -223,23 +223,49 @@
                 & \text{Let A and B be sets} \\
                 & \text{Suppose A = B} \\
                 & \text{Since $\mathscr{P}(A)$ is the set of all subsets of A and $\mathscr{P}(B)$ is the set of all subsets of B} \\
+                & \text{Then $\mathscr{P}(A)=\mathscr{P}(B)$} \\
+                & \text{Conversally suppose $\mathscr{P}(A) = \mathscr{P}(B)$} \\
+                & \text{$\mathscr{P}(A)$ is the set of all subsets of A, and $\mathscr{P}(B)$ the set of all subsets of B} \\
+                & \text{Therefore $A = B$}
             \end{align*}
         \end{proof}
         
     \item Let A and B be sets. Prove that ($A^c \cup B)^c = A \cup B^c$
         \begin{proof}[Proof:\nopunct]
+            \begin{align*}
+                & \text{Let A and B be sets} \\
+                & \text{Using Demorgan's Law $(A^c \cap B)^c =  (A^c)^c \cup B^c = A \cup B^c$} \\
+                & \text{Thus $(A^c \cap B)^c = A \cup B^c$}
+            \end{align*}
         \end{proof}
         
     \item Let $A,B,C$, and $D$ be sets. Prove that if $C \subseteq A$ and $D \subseteq B,$ then $D-A\subseteq B-C.$
         \begin{proof}[Proof:\nopunct]
         \end{proof}
         
+\pagebreak
     \item Use the Principle of Mathematical Induction to prove the following: \newline
     For all $n \in \mathbb{N}$
     \begin{center}
         $1\cdot1+2\cdot2!+3\cdot3!+\cdot \cdot \cdot + n\cdot n!=(n+1)!-1$
     \end{center}
         \begin{proof}[Proof:\nopunct]
+            Let n = 1
+            \begin{align*}
+                \text{ thus $5^n-1 = 24,$ which is divisible by 8}
+            \end{align*}
+                Now assume $n \in \mathbb{N}$ is true, we will show $n+1$ is true:
+            \begin{align*}
+                \text{Thus, $5^{2(n+1)}-1 $ } 
+                & \text{$ = 5^{(2n+2)} -1$} \\
+                & \text{$ = 5^n\cdot 5^2 - 1$} \\
+                & \text{$ = 5^n\cdot 25 - 1$} \\
+                & \text{$ = 5^n\cdot 25 -25+24$} \\
+                & \text{$ = 25(5^n -1)+24$} \\
+                & \text{$ = 25(5^n - 1) \in \mathbb{N}$ and is divisible by 8 because $(5^n - 1)$ is divisible by 8} \\
+                & \text{and, 24 is divisible by 8.} \\
+                & \text{Therefor for all $n\in \mathbb{N}$, $5^n - 1,$ is divisible by 8.}
+            \end{align*}
         \end{proof}
         
     \item Use the principle of Mathematical Induction to prove the following: For all $n \in \mathbb{N}:$
